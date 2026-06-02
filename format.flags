@@ -1,0 +1,77 @@
+# ============================================================================ #
+# Verible formatter flags configuration file
+# 
+# Usage:
+# 
+# ```
+# verible-verilog-format --flagfile=path/to/format.flags  [options] <file> [<file...>]
+# ```
+# 
+# See the following for options description:
+# 
+# - verible-verilog-format --helpfull
+# - https://chipsalliance.github.io/verible/verilog_format.html
+# 
+# Initial file creation date: 2026-05-22
+# ============================================================================ #
+
+# ============================================================================ #
+# Flags from external/abseil-cpp~/absl/flags/parse.cc
+# ============================================================================ #
+# This file itself is passed to verible-verilog-format via --flagfile
+
+# ============================================================================ #
+# Flags from verible/common/formatting/basic-format-style-init.cc
+# ============================================================================ #
+--column_limit=120
+--indentation_spaces=4
+# --line_break_penalty=2
+# --line_terminator=auto
+--over_column_limit_penalty=120
+--wrap_spaces=4
+
+# ============================================================================ #
+# Flags from verible/verilog/formatting/format-style-init.cc
+# ============================================================================ #
+# --assignment_statement_alignment=infer
+# --case_items_alignment=infer
+# --class_member_variable_alignment=infer
+# --compact_indexing_and_selections=true
+# --distribution_items_alignment=infer
+# --enum_assignment_statement_alignment=infer
+# --expand_coverpoints=false
+# --formal_parameters_alignment=infer
+# --formal_parameters_indentation=wrap
+# --module_net_variable_alignment=infer
+# --named_parameter_alignment=infer
+# --named_parameter_indentation=wrap
+# --named_port_alignment=infer
+# --named_port_indentation=wrap
+# --port_declarations_alignment=infer
+# --port_declarations_indentation=wrap
+# --port_declarations_right_align_packed_dimensions=false
+# --port_declarations_right_align_unpacked_dimensions=false
+# --struct_union_members_alignment=infer
+# --try_wrap_long_lines=false
+# --wrap_end_else_clauses=false
+
+# ============================================================================ #
+# Flags from verible/verilog/parser/verilog-parser.cc
+# ============================================================================ #
+# --verilog_trace_parser=false
+
+# ============================================================================ #
+# Flags from verible/verilog/tools/formatter/verilog-format.cc
+# ============================================================================ #
+# --failsafe_success=true
+--inplace=true
+# --lines=
+# --max_search_states=100000
+# --show_equally_optimal_wrappings=false
+# --show_inter_token_info=false
+# --show_largest_token_partitions=0
+# --show_token_partition_tree=false
+# --stdin_name="<stdin>"
+# --verbose=false
+# --verify=false
+# --verify_convergence=true
